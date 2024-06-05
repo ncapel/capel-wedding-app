@@ -1,12 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import NavBar from './Components/Nav';
+import Header from './Components/Header';
 
 function App() {
   return (
-    <div className="App">
-      <h1>
-        Hello World
-      </h1>
+    <div className='mt-5 text-white'>
+      <Header/>
+      <NavBar/>
     </div>
   );
 }
