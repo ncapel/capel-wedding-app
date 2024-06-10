@@ -12,7 +12,7 @@ function NavBar() {
 
     const navItems = navList.map((listItem,i) =>
     <li key={'nav_li_'+i} className='nav-item'>
-    <a href={listItem} className='nav-link text-white link'>{listItem}</a>
+    <a href={listItem.replaceAll(' ','')} className='nav-link text-white link'>{listItem}</a>
     </li>);
 
     return (
