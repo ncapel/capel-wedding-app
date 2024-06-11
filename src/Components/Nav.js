@@ -1,25 +1,37 @@
-import React from 'react';
+import React, {useState} from 'react';
+import Navbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav';
+import Container from 'react-bootstrap/Container';
+import Collapse from 'react-bootstrap/Collapse';
+import NavbarToggle from 'react-bootstrap/NavbarToggle';
+
 
 function NavBar() {
-    const navList = [
-        'Home',
-        'Our Story',
-        'Meet the Team',
-        'Wedding Info',
-        'RSVP',
-        'Registry'
-    ];
+    const [isOpen, setIsOpen] = useState(false);
 
-    const navItems = navList.map((listItem,i) =>
-    <li key={'nav_li_'+i} className='nav-item'>
-    <a href={listItem.replaceAll(' ','')} className='nav-link text-white link'>{listItem}</a>
-    </li>);
+    const toggleNav = () => {
+        setIsOpen(!isOpen);
+    };
 
     return (
-        <nav className='navbar navbar-expand-lg'>
-            <ul className='navbar-nav mx-auto mt-5'>{navItems}</ul>
-        </nav>
+    <Navbar bg="dark" expand="never" fixed="top" className="vertical-navbar">
+        <Container>
+            {/* <Navbar.Brand href="#" className="text-white">Your Brand Name</Navbar.Brand> */}
+            <NavbarToggle aria-controls="basic-navbar-nav" onClick={toggleNav} className="bg-warning" />
+            <Collapse in={isOpen} id="basic-navbar-nav">
+            <Nav className="me-auto">
+                <Nav.Link href="#" className="text-white">Home</Nav.Link>
+                <Nav.Link href="#" className="text-white">Our Story</Nav.Link>
+                <Nav.Link href="#" className="text-white">Meet the Team</Nav.Link>
+                <Nav.Link href="#" className="text-white">Wedding Info</Nav.Link>
+                <Nav.Link href="#" className="text-white">RSVP</Nav.Link>
+                <Nav.Link href="#" className="text-white">Registry</Nav.Link>
+                <Nav.Link href="#" className="text-white">Vendors</Nav.Link>
+            </Nav>
+            </Collapse>
+        </Container>
+    </Navbar>
     );
-};
+}
 
 export default NavBar;

@@ -5,13 +5,46 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(44, 43, 43);
-  /* background-image: url(./assets/img/bg_pic.png);
-  background-size: cover;
-  background-repeat: no-repeat; */
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.vertical-navbar {
+  /* Styles for the main container (position, height, width) */
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh; /* Full viewport height */
+  width: 120px; /* Adjust width as needed */
+  align-items:first baseline;
+}
+
+.nav-links {
+  /* Styles for the navigation link container */
+  display: flex;
+  flex-direction: column; /* Stack links vertically */
+  list-style: none; /* Remove default list style */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+}
+
+.nav-link {
+  /* Styles for individual navigation links */
+  padding-top: 5px; /* Adjust padding as needed */
+  padding-bottom: 5px;
+  margin: 0;
+  text-decoration: none; /* Remove underline */
+  color: #333; /* Link text color */
+  /* Add hover styles for interactivity */
+}
+
+@media (max-width: 768px) {
+
+.vertical-navbar {
+  width: 85px;
+}
+
 }
