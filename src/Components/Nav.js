@@ -16,7 +16,6 @@ function NavBar() {
     return (
     <Navbar bg="dark" expand="never" fixed="top" className="vertical-navbar">
         <Container>
-            {/* <Navbar.Brand href="#" className="text-white">Your Brand Name</Navbar.Brand> */}
             <NavbarToggle aria-controls="basic-navbar-nav" onClick={toggleNav} className="bg-warning" />
             <Collapse in={isOpen} id="basic-navbar-nav">
             <Nav className="me-auto">
