@@ -5,7 +5,7 @@ import BackgroundImage from './Components/Background';
 
 function App() {
   return (
-    <div className='mt-5 text-white'>
+    <div className='mt-5'>
       <Header/>
       <NavBar/>
     </div>
