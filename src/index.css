@@ -15,70 +15,106 @@ code {
 
 @font-face {
   font-family: 'TitleFont';
-  src: local('TitleFont'), url(./assets/fonts/ParkLaneNF.ttf) format('truetype');
+  src: local('TitleFont'), url(./assets/fonts/ChopinScript.ttf) format('truetype');
   /* other formats include: 'woff2', 'truetype, 'opentype',
                             'embedded-opentype', and 'svg' */
 }
 
-.vertical-navbar {
-  /* Styles for the main container (position, height, width) */
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh; /* Full viewport height */
-  width: 120px; /* Adjust width as needed */
-  align-items:first baseline;
+@font-face {
+  font-family: 'TitleFont2';
+  src: local('TitleFont2'), url(./assets/fonts/JosefinSans-Regular.ttf) format('truetype');
 }
 
-.nav-links {
-  /* Styles for the navigation link container */
-  display: flex;
-  flex-direction: column; /* Stack links vertically */
-  list-style: none; /* Remove default list style */
-  padding: 0; /* Remove default padding */
-  margin: 0; /* Remove default margin */
-}
+  .vertical-navbar {
+    /* Styles for the main container (position, height, width) */
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 1rem;
+    width: 120px;
+    align-items:first baseline;
+    margin-top: 2rem;
+  }
 
-.nav-link {
-  /* Styles for individual navigation links */
-  padding-top: 5px; /* Adjust padding as needed */
-  padding-bottom: 5px;
-  margin: 0;
-  text-decoration: none; /* Remove underline */
-  color: #333; /* Link text color */
-  /* Add hover styles for interactivity */
-}
+  .nav-links {
+    /* Styles for the navigation link container */
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
 
-.full-screen-background {
-  background-image: url('./assets/img/bg_pic.png');
-  height: 100vh;
-  width: 100vw;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 0;
-  background-repeat: repeat;
-  background-position: center;
-  background-size:cover;
-}
+  .nav-link {
+    /* Styles for individual navigation links */
+    font-family: TitleFont2;
+    padding: 5px;
+    width: 106px;
+    margin-right: 5px;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+  }
 
-.title {
-  font-family: TitleFont;
-}
+  .a-color:hover {
+    color: goldenrod;
+  }
 
-.header {
-  margin-top: 450px;
+  .full-screen-background {
+    background-image: url('./assets/img/bg_pic.png');
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    background-repeat: repeat;
+    background-position: center;
+    background-size:cover;
+  }
+
+  .title {
+    font-family: TitleFont;
+    font-size: 72px;
+  }
+
+  .sub-title {
+    font-family: TitleFont2;
+  }
+
+  .header {
+    margin-top: 450px;
+  }
+
+@media (min-width: 769px) and (max-width: 1023px) {
+  /* Styles for tablets */
 }
 
 @media (max-width: 768px) {
 
-.vertical-navbar {
-  width: 85px;
-}
+  .vertical-navbar {
+    margin-top: 0;
+  }
 
-.header {
-  margin-top: 220px;
-}
+  .nav-link {
+    background-color: #212529;
+  }
 
+  .nav-links {
+    flex-direction: column; /* Stack links vertically */
+  }
+
+  .header {
+    margin-top: 20rem;
+  }
+
+  .title {
+    font-size: 36px;
+  }
+
+  .sub-title {
+    font-size: 16px;
+
+  }
 
 }
