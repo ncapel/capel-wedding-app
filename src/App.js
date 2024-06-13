@@ -1,11 +1,10 @@
 import React from 'react';
 import NavBar from './Components/Nav';
 import Header from './Components/Header';
-import BackgroundImage from './Components/Background';
 
 function App() {
   return (
-    <div className='mt-5'>
+    <div className='full-screen-background'>
       <Header/>
       <NavBar/>
     </div>

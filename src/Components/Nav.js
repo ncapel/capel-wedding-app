@@ -14,7 +14,7 @@ function NavBar() {
     };
 
     return (
-    <Navbar bg="dark" expand="never" fixed="top" className="vertical-navbar">
+    <Navbar expand="never" fixed="top" className="vertical-navbar">
         <Container>
             <NavbarToggle aria-controls="basic-navbar-nav" onClick={toggleNav} className="bg-warning" />
             <Collapse in={isOpen} id="basic-navbar-nav">
