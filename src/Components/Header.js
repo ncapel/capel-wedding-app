@@ -8,10 +8,10 @@ function Header() {
     const days = Math.floor(countDown / (1000 * 60 * 60 * 24));
 
     return (
-        <div className='text-center text-white header'>
+        <div id='home' className='text-center text-white header'>
             <h1 className='mb-3 title'>Nicholas & Cheyenne</h1>
             <h5 className='sub-title'>November 10, 2024 • Hickory, NC</h5>
-            <h5 className='sub-title'>{days + ' days to go!'.toUpperCase()}</h5>
+            <h5 className='sub-title'>{days + ' DAYS TO GO!'}</h5>
         </div>
     );
 };
