@@ -3,10 +3,10 @@ import { Container, Row, Col } from 'react-bootstrap';
 
 function Story() {
     return (
-        <Container fluid className='text-center story'>
+        <Container fluid className='text-center story' id='our-story'>
             <Row>
             <Col xs={12} md={8} lg={6} className='mx-auto'>
-                <h2 className='text-white sub-title mb-5'>How They Met</h2>
+                <h2 className='text-white sub-title my-5'>How They Met</h2>
                 <p className='text-white sub-title'>
                 Nick and Cheyenne's connection blossomed in the most unexpected place – the pharmacy. 
                 Their shared love for weight lifting became a common thread, weaving through the aisles of 

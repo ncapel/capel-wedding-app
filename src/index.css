@@ -30,10 +30,14 @@ code {
     position: fixed;
     top: 0;
     left: 0;
-    height: 1rem;
+    /* height: 1rem; */
     width: 120px;
     align-items:first baseline;
-    margin-top: 2rem;
+  }
+
+  .navbar.hidden {
+    transform: translateY(-100%);
+    transition: all 0.3s ease-in-out;
   }
 
   .nav-links {
@@ -65,6 +69,7 @@ code {
     height: 100vh;
     width: 100vw;
     overflow-y: scroll;
+    overflow-x: hidden;
   }
 
   .title {
@@ -88,13 +93,29 @@ code {
     margin-top: 1000px;
   }
 
+.venue-image {
+  width: 45rem;
+  height: 45rem;
+  margin: 0px;
+  padding: 0px;
+}
+
   .map {
-    height: 500px;
-    width: 500px;
+    height: 45rem;
+    width: 45rem;
   }
 
 @media (min-width: 769px) and (max-width: 1023px) {
-  /* Styles for tablets */
+
+  .venue-image {
+    width: 25rem;
+    height: 25rem;
+  }
+
+    .map {
+      height: 25rem;
+      width: 25rem;
+    }
 }
 
 @media (max-width: 768px) {
@@ -108,7 +129,7 @@ code {
   }
 
   .nav-links {
-    flex-direction: column; /* Stack links vertically */
+    flex-direction: column;
   }
 
   .header {
@@ -131,5 +152,15 @@ code {
   .wed-info {
     margin-top: 500px;
   }
+
+  .venue-image {
+    width: 25rem;
+    height: 25rem;
+  }
+
+    .map {
+      height: 25rem;
+      width: 25rem;
+    }
 
 }

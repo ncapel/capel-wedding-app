@@ -3,6 +3,7 @@ import NavBar from './Components/Nav';
 import Header from './Components/Header';
 import Story from './Components/OurStory';
 import WeddingInfo from './Components/Info';
+import venueImage from './assets/img/warehouse18.jpg'
 
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
       <NavBar/>
       <Header/>
       <Story/>
-      <WeddingInfo/>
+      <WeddingInfo imgPath={venueImage}/>
     </div>
   );
 }

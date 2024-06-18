@@ -7,40 +7,72 @@ import NavbarToggle from 'react-bootstrap/NavbarToggle';
 
 function NavBar() {
     const [isOpen, setIsOpen] = useState(false);
-    const [isLargeViewport, setIsLargeViewport] = useState(window.innerWidth > 768); // Adjust breakpoint as needed
+    const [isLargeViewport, setIsLargeViewport] = useState(window.innerWidth > 768);
+    const [isNavbarHidden, setIsNavbarHidden] = useState(false);
 
     const toggleNav = () => {
         setIsOpen(!isOpen);
     };
 
     useEffect(() => {
-        const handleResize = () => setIsLargeViewport(window.innerWidth > 768); // Adjust breakpoint as needed
+        const handleResize = () => setIsLargeViewport(window.innerWidth > 768);
         window.addEventListener('resize', handleResize);
 
-        // Cleanup function to remove event listener on component unmount
-        return () => window.removeEventListener('resize', handleResize);
+        const handleScroll = () => {
+        const scrollY = window.scrollY;
+        setIsNavbarHidden(scrollY > 10);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        // Cleanup functions to remove event listeners on component unmount
+        return () => {
+        window.removeEventListener('resize', handleResize);
+        window.removeEventListener('scroll', handleScroll);
+        };
     }, []);
 
     return (
-        <Navbar expand='lg' fixed='top' className='vertical-navbar'>
+        <Navbar
+        expand='lg'
+        fixed='top'
+        className={`vertical-navbar ${isNavbarHidden ? 'hidden' : ''}`}
+        onMouseEnter={toggleNav}
+        onMouseLeave={toggleNav}
+        >
         <Container>
-        {isLargeViewport ? null : ( // Only render on smaller viewports
+            {isLargeViewport ? null : ( // Only render on smaller viewports
             <NavbarToggle aria-controls='basic-navbar-nav' onClick={toggleNav} className='bg-warning' />
-        )}
+            )}
             <Collapse in={isLargeViewport || isOpen} id='basic-navbar-nav'>
             <Nav className='me-auto'>
-                <Nav.Link href='/#home' className='a-color'>Home</Nav.Link>
-                <Nav.Link href='/#our-story' className='a-color'>Our Story</Nav.Link>
-                <Nav.Link href='/#wedding-info' className='a-color'>Wedding Info</Nav.Link>
-                <Nav.Link href='#' className='a-color'>RSVP</Nav.Link>
-                <Nav.Link href='#' className='a-color'>Registry</Nav.Link>
-                <Nav.Link href='/#vendors' className='a-color'>Vendors</Nav.Link>
+                <Nav.Link href='#home' className='a-color'>
+                Home
+                </Nav.Link>
+                <Nav.Link href='#our-story' className='a-color'>
+                Our Story
+                </Nav.Link>
+                <Nav.Link href='#wedding-info' className='a-color'>
+                Wedding Info
+                </Nav.Link>
+                <Nav.Link
+                href='https://docs.google.com/forms/d/e/1FAIpQLSd8wqlHVvA50ze9Srhta26qFRdQ-WzG6eslr3vVCcXapVlpIg/viewform?usp=sf_link' 
+                className='a-color'
+                target='_blank'
+                >
+                RSVP
+                </Nav.Link>
+                <Nav.Link href='#' className='a-color'>
+                Registry
+                </Nav.Link>
+                <Nav.Link href='#vendors' className='a-color'>
+                Vendors
+                </Nav.Link>
             </Nav>
             </Collapse>
         </Container>
         </Navbar>
     );
-};
+}
 
 export default NavBar;
-
