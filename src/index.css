@@ -60,7 +60,7 @@ code {
     color: white;
   }
 
-  .a-color:hover {
+  .nav-link:hover {
     color: goldenrod;
   }
 
@@ -96,14 +96,9 @@ code {
 .venue-image {
   width: 45rem;
   height: 45rem;
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 }
-
-  .map {
-    height: 45rem;
-    width: 45rem;
-  }
 
 @media (min-width: 769px) and (max-width: 1023px) {
 
@@ -111,21 +106,12 @@ code {
     width: 25rem;
     height: 25rem;
   }
-
-    .map {
-      height: 25rem;
-      width: 25rem;
-    }
 }
 
 @media (max-width: 768px) {
 
   .vertical-navbar {
     margin-top: 0;
-  }
-
-  .nav-link {
-    background-color: #212529;
   }
 
   .nav-links {
@@ -157,10 +143,5 @@ code {
     width: 25rem;
     height: 25rem;
   }
-
-    .map {
-      height: 25rem;
-      width: 25rem;
-    }
 
 }
