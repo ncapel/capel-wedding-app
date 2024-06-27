@@ -25,7 +25,7 @@ code {
   src: local('TitleFont2'), url(./assets/fonts/JosefinSans-Regular.ttf) format('truetype');
 }
 
-  .vertical-navbar {
+  .horizontal-navbar {
     /* Styles for the main container (position, height, width) */
     position: fixed;
     top: 0;
@@ -74,30 +74,36 @@ code {
 
   .title {
     font-family: TitleFont;
-    font-size: 72px;
+    font-size: 84px;
   }
 
   .sub-title {
     font-family: TitleFont2;
+    font-size: 24px;
   }
 
+  h2 {
+    font-size: 48px !important;
+  }
+  
   .header {
-    margin-top: 450px;
+    margin-top: 250px;
   }
 
   .story {
-    margin-top: 1000px;
+    margin-top: 500px;
   }
-
+  
   .wed-info {
-    margin-top: 1000px;
+    margin-top: 500px;
+    margin-bottom: 500px;
   }
 
-.venue-image {
-  width: 45rem;
-  height: 45rem;
-  margin: 0;
-  padding: 0;
+  .venue-image {
+    width: 45rem;
+    height: 45rem;
+    margin: 0;
+    padding: 0;
 }
 
 @media (min-width: 769px) and (max-width: 1023px) {
@@ -123,20 +129,25 @@ code {
   }
 
   .title {
-    font-size: 36px;
+    font-size: 48px;
   }
 
   .sub-title {
-    font-size: 16px;
+    font-size: 20px;
 
+  }
+  
+  h2 {
+    font-size: 20px;
   }
 
   .story {
-    margin-top: 500px;
+    margin-top: 250px;
   }
 
   .wed-info {
-    margin-top: 500px;
+    margin-top: 250px;
+    margin-bottom: 250px;
   }
 
   .venue-image {

@@ -36,7 +36,7 @@ function NavBar() {
         <Navbar
         expand='lg'
         fixed='top'
-        className={`vertical-navbar ${isNavbarHidden ? 'hidden' : ''}`}
+        className={`horizontal-navbar ${isNavbarHidden ? 'hidden' : ''}`}
         onMouseEnter={toggleNav}
         onMouseLeave={toggleNav}
         >
