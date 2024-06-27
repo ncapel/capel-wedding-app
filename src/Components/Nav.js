@@ -8,37 +8,37 @@ import NavbarToggle from 'react-bootstrap/NavbarToggle';
 function NavBar() {
     const [isOpen, setIsOpen] = useState(false);
     const [isLargeViewport, setIsLargeViewport] = useState(window.innerWidth > 768);
-    const [isNavbarHidden, setIsNavbarHidden] = useState(false);
 
     const toggleNav = () => {
         setIsOpen(!isOpen);
     };
 
+    let prevScrollPos = window.pageYOffset;
+    window.addEventListener('scroll', function() {
+        const currentScrollPos = window.pageYOffset;
+            
+        if (prevScrollPos > currentScrollPos) {
+            document.querySelector('.navbar').classList.add('hidden');
+            document.querySelector('.navbar').classList.remove('show');
+        } else {
+            document.querySelector('.navbar').classList.add('show');
+            document.querySelector('.navbar').classList.remove('hidden');
+        }
+    });
+
     useEffect(() => {
         const handleResize = () => setIsLargeViewport(window.innerWidth > 768);
         window.addEventListener('resize', handleResize);
-
-        const handleScroll = () => {
-        const scrollY = window.scrollY;
-        setIsNavbarHidden(scrollY > 10);
-        };
-
-        window.addEventListener('scroll', handleScroll);
-
         // Cleanup functions to remove event listeners on component unmount
         return () => {
         window.removeEventListener('resize', handleResize);
-        window.removeEventListener('scroll', handleScroll);
         };
     }, []);
 
     return (
         <Navbar
         expand='lg'
-        fixed='top'
-        className={`horizontal-navbar ${isNavbarHidden ? 'hidden' : ''}`}
-        onMouseEnter={toggleNav}
-        onMouseLeave={toggleNav}
+        className={`horizontal-navbar`}
         >
         <Container>
             {isLargeViewport ? null : ( // Only render on smaller viewports
@@ -46,7 +46,7 @@ function NavBar() {
             )}
             <Collapse in={isLargeViewport || isOpen} id='basic-navbar-nav'>
             <Nav className='me-auto'>
-                <Nav.Link href='#home'>
+                <Nav.Link href='/'>
                 Home
                 </Nav.Link>
                 <Nav.Link href='#our-story'>
