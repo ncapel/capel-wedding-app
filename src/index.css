@@ -25,20 +25,23 @@ code {
   src: local('TitleFont2'), url(./assets/fonts/JosefinSans-Regular.ttf) format('truetype');
 }
 
-  nav {
+  .horizontal-navbar {
     /* Styles for the main container (position, height, width) */
-    position: fixed;
-    top: 0;
     left: 0;
+    top: 0;
+    position: fixed;
     align-items:first baseline;
   }
 
   .hidden {
     visibility: hidden;
+    transition: all 0.5s;
+    transform: translateY(-100%);
   }
 
-  .show {
+  .active {
     visibility: visible;
+    transition: all 0.5s;
   }
 
   .nav-links {

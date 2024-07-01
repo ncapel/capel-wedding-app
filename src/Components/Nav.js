@@ -4,28 +4,17 @@ import Nav from 'react-bootstrap/Nav';
 import Container from 'react-bootstrap/Container';
 import Collapse from 'react-bootstrap/Collapse';
 import NavbarToggle from 'react-bootstrap/NavbarToggle';
+import { useScroll } from './Scroll.js';
 
 function NavBar() {
     const [isOpen, setIsOpen] = useState(false);
     const [isLargeViewport, setIsLargeViewport] = useState(window.innerWidth > 768);
+    const { y, x, scrollDirection } = useScroll();
 
     const toggleNav = () => {
         setIsOpen(!isOpen);
     };
-
-    let prevScrollPos = window.pageYOffset;
-    window.addEventListener('scroll', function() {
-        const currentScrollPos = window.pageYOffset;
-            
-        if (prevScrollPos > currentScrollPos) {
-            document.querySelector('.navbar').classList.add('hidden');
-            document.querySelector('.navbar').classList.remove('show');
-        } else {
-            document.querySelector('.navbar').classList.add('show');
-            document.querySelector('.navbar').classList.remove('hidden');
-        }
-    });
-
+    
     useEffect(() => {
         const handleResize = () => setIsLargeViewport(window.innerWidth > 768);
         window.addEventListener('resize', handleResize);
@@ -38,14 +27,14 @@ function NavBar() {
     return (
         <Navbar
         expand='lg'
-        className={`horizontal-navbar`}
+        className={`horizontal-navbar ${scrollDirection === 'down' ? 'active' : 'hidden'}`}
         >
         <Container>
             {isLargeViewport ? null : ( // Only render on smaller viewports
             <NavbarToggle aria-controls='basic-navbar-nav' onClick={toggleNav} className='bg-warning' />
             )}
             <Collapse in={isLargeViewport || isOpen} id='basic-navbar-nav'>
-            <Nav className='me-auto'>
+            <Nav className=''>
                 <Nav.Link href='/'>
                 Home
                 </Nav.Link>
