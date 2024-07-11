@@ -35,7 +35,7 @@ function NavBar() {
             )}
             <Collapse in={isLargeViewport || isOpen} id='basic-navbar-nav'>
             <Nav className=''>
-                <Nav.Link href='/'>
+                <Nav.Link href='#root'>
                 Home
                 </Nav.Link>
                 <Nav.Link href='#our-story'>

@@ -27,10 +27,12 @@ code {
 
   .horizontal-navbar {
     /* Styles for the main container (position, height, width) */
-    left: 0;
+    left: 25px;
     top: 0;
     position: fixed;
     align-items:first baseline;
+    background-color: #212526;
+    border-radius: 10px;
   }
 
   .hidden {
@@ -57,11 +59,15 @@ code {
     /* Styles for individual navigation links */
     font-family: TitleFont2;
     padding: 5px;
-    width: 106px;
-    margin-right: 5px;
+    margin-right: 15px;
     text-decoration: none;
     text-align: center;
     color: white;
+    font-size: 20px;
+  }
+
+  .nav-link:active {
+    color: goldenrod;
   }
 
   .nav-link:hover {
@@ -79,6 +85,7 @@ code {
   .title {
     font-family: TitleFont;
     font-size: 84px;
+    text-shadow: 2px 2px 2px gray;
   }
 
   .sub-title {
@@ -116,12 +123,16 @@ code {
     width: 25rem;
     height: 25rem;
   }
+
+  .horizontal-navbar {
+    width: 30px;
+  }
 }
 
 @media (max-width: 768px) {
 
-  .vertical-navbar {
-    margin-top: 0;
+  .horizontal-navbar {
+    width: 30px;
   }
 
   .nav-links {
