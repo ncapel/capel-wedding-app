@@ -62,16 +62,12 @@ code {
     margin-right: 15px;
     text-decoration: none;
     text-align: center;
-    color: white;
+/*    color: white; */
     font-size: 20px;
   }
 
-  .nav-link:active {
-    color: goldenrod;
-  }
-
   .nav-link:hover {
-    color: goldenrod;
+    color: goldenrod !important;
   }
 
   .full-screen-background {

@@ -35,25 +35,26 @@ function NavBar() {
             )}
             <Collapse in={isLargeViewport || isOpen} id='basic-navbar-nav'>
             <Nav className=''>
-                <Nav.Link href='#root'>
+                <Nav.Link href='#root' className='text-white'>
                 Home
                 </Nav.Link>
-                <Nav.Link href='#our-story'>
+                <Nav.Link href='#our-story' className='text-white'>
                 Our Story
                 </Nav.Link>
-                <Nav.Link href='#wedding-info'>
+                <Nav.Link href='#wedding-info' className='text-white'>
                 Wedding Info
                 </Nav.Link>
                 <Nav.Link
                 href='https://docs.google.com/forms/d/e/1FAIpQLSd8wqlHVvA50ze9Srhta26qFRdQ-WzG6eslr3vVCcXapVlpIg/viewform?usp=sf_link'
                 target='_blank'
+                className='text-white'
                 >
                 RSVP
                 </Nav.Link>
-                <Nav.Link href='#'>
+                <Nav.Link href='#' className='text-white'>
                 Registry
                 </Nav.Link>
-                <Nav.Link href='#vendors'>
+                <Nav.Link href='#vendors' className='text-white'>
                 Vendors
                 </Nav.Link>
             </Nav>
