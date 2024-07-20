@@ -28,11 +28,9 @@ code {
   .horizontal-navbar {
     /* Styles for the main container (position, height, width) */
     left: 25px;
-    top: 0;
+    top: 10px;
     position: fixed;
     align-items:first baseline;
-    background-color: #212526;
-    border-radius: 10px;
   }
 
   .hidden {
@@ -49,10 +47,9 @@ code {
   .nav-links {
     /* Styles for the navigation link container */
     display: flex;
-    flex-direction: row;
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 0; 
   }
 
   .nav-link {
@@ -62,7 +59,6 @@ code {
     margin-right: 15px;
     text-decoration: none;
     text-align: center;
-/*    color: white; */
     font-size: 20px;
   }
 
@@ -71,9 +67,8 @@ code {
   }
 
   .full-screen-background {
-    /* background-image: url('./assets/img/bg_pic.png'); FIND BETTER IMAGE */
-    height: 100vh;
-    width: 100vw;
+    border: 15px solid transparent;
+    border-image: url('./assets/img/gold_pattern.jpeg') 30 round;
     overflow-y: scroll;
     overflow-x: hidden;
   }
@@ -140,7 +135,7 @@ code {
   }
 
   .title {
-    font-size: 48px;
+    font-size: 42px;
   }
 
   .sub-title {
