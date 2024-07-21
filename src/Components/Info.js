@@ -24,7 +24,7 @@ function WeddingInfo (props) {
                     To fully immerse yourselves in the spirit of the evening, we invite our guests to consider attire reminiscent of the 1920s.  
                 </p>
                 <p className='sub-title text-white px-5'>
-                    We're having a buffet style dinner, the main dishes are Prime Rib and Garlic Herb Chicken, and the sides are Roasted Broccoli and Mashed Potatoes.
+                    We're having a buffet style dinner, the proteins are Prime Rib and Garlic Herb Chicken, and the sides are Roasted Broccoli, Mashed Potatoes, with a Mixed Greens Salad.
                 </p>
             </Col>
         </Row>
