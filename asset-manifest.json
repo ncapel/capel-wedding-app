@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/capel-wedding-app/static/css/main.ffa72e81.css",
-    "main.js": "/capel-wedding-app/static/js/main.cc9ba6d5.js",
+    "main.js": "/capel-wedding-app/static/js/main.3ea9bd39.js",
     "static/media/warehouse18.jpg": "/capel-wedding-app/static/media/warehouse18.36013e6b830856b7c994.jpg",
     "static/media/bg_img.jpg": "/capel-wedding-app/static/media/bg_img.47069013cda932e13111.jpg",
     "static/media/ChopinScript.ttf": "/capel-wedding-app/static/media/ChopinScript.294d294101e0ae84b924.ttf",
     "static/media/JosefinSans-Regular.ttf": "/capel-wedding-app/static/media/JosefinSans-Regular.ccbb4935ba0663d5ae6b.ttf",
     "index.html": "/capel-wedding-app/index.html",
     "main.ffa72e81.css.map": "/capel-wedding-app/static/css/main.ffa72e81.css.map",
-    "main.cc9ba6d5.js.map": "/capel-wedding-app/static/js/main.cc9ba6d5.js.map"
+    "main.3ea9bd39.js.map": "/capel-wedding-app/static/js/main.3ea9bd39.js.map"
   },
   "entrypoints": [
     "static/css/main.ffa72e81.css",
-    "static/js/main.cc9ba6d5.js"
+    "static/js/main.3ea9bd39.js"
   ]
 }
