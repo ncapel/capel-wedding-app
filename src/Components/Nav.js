@@ -51,7 +51,10 @@ function NavBar() {
                 >
                 RSVP
                 </Nav.Link>
-                <Nav.Link href='https://www.amazon.com/wedding/registry/1HYEU99B0L36Y' className='text-white'>
+                <Nav.Link
+                href='https://www.amazon.com/wedding/registry/1HYEU99B0L36Y'
+                target='_blank'
+                className='text-white'>
                 Registry
                 </Nav.Link>
                 <Nav.Link href='#vendors' className='text-white'>
