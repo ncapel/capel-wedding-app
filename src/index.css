@@ -27,8 +27,8 @@ code {
 
   .horizontal-navbar {
     /* Styles for the main container (position, height, width) */
-    left: 30vw;
-    top: 35px;
+    left: 33vw;
+    top: 45px;
     position: fixed;
     align-items:first baseline;
     background-image: linear-gradient(to right, #e7be7f, #906e49);
