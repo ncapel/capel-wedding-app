@@ -2,7 +2,7 @@
   "name": "capel-wedding-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://ncapel.github.io/capel-wedding-app",
+  "homepage": "https://capel-wedding.site",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
