@@ -8,15 +8,15 @@ import { useScroll } from './Scroll.js';
 
 function NavBar() {
     const [isOpen, setIsOpen] = useState(false);
-    const [isLargeViewport, setIsLargeViewport] = useState(window.innerWidth > 768);
+    const [isLargeViewport, setIsLargeViewport] = useState(window.innerWidth > 1023);
     const { y, x, scrollDirection } = useScroll();
 
     const toggleNav = () => {
         setIsOpen(!isOpen);
     };
-    
+
     useEffect(() => {
-        const handleResize = () => setIsLargeViewport(window.innerWidth > 768);
+        const handleResize = () => setIsLargeViewport(window.innerWidth > 1023);
         window.addEventListener('resize', handleResize);
         // Cleanup functions to remove event listeners on component unmount
         return () => {
